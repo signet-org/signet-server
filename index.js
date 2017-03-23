@@ -96,6 +96,8 @@ app.post('/sig', (req, res) => {
     })
 })
 
+app.get('/', (req, res) => res.redirect('https://github.com/signet-org'));
+
 app.use(function(err, req, res, next) {
   console.error(err.stack)
   res.status(500).send({ok: false, error: 'internal error'})
